@@ -8,6 +8,7 @@
     --corPrincipal:#FFF4F4;
     --fontHanken:"Hanken Grotesk",sans-serif ;
     --corDourado:#c5a028;
+    --corSecundaria:#fdf8f8;
 }
 .container{
     width:95% ;
@@ -150,6 +151,8 @@ form{
     justify-content: space-around;
     width: 100%;
     max-width: 1200px;
+    
+    /* flex-direction: column; */
 } 
 
 .lf_coluna{
@@ -166,7 +169,9 @@ form{
 
 .form_coluna1,
 .form_coluna2{
-    width: 414px;
+    max-width: 500px;
+    width: 80%; 
+
 }
 .input_img span,
 form label{
@@ -174,7 +179,7 @@ form label{
     text-transform: uppercase;
     color: #444444;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
@@ -210,36 +215,74 @@ form label{
     cursor: pointer;
 
 }
+
 form input[type=checkbox],
 form input[type=text]{
     height: 25px;
 }
 .input_cat input{
+
+    margin-right: 20px;
+    max-width: 414px;
+    
+
+}
+.input_cat{
     width: 314px;
     margin-right: 20px;
-
+}
+.input_valor{
+    width: 91%;
 }
 
 .input_valor input{
     margin-right: 20px;
-    width: 360px;
+    max-width: 360px;
 }
 
 form input[type=button]{
     margin: 100px auto 0;
     display: block;
     font-family: var(--fontHanken);
-    background-color: black;
-    height: 50px;
-    width: 150px;
-    color: #FFFFFF;
-    font-size: 12px;
     text-transform: uppercase;
-    border: 0;
-    letter-spacing: 2px;''""
+    font-weight: 600;
+    padding: 16px 55px;
+    font-size: 12px;
+    background-color: black;
+    color: #FFFFFF;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+/* -----------LISTA DE PRODUTOS------- */
+.list_produtos{
+    background-color: var(--corSecundaria);
+
+}
+table{
+    background-color: aquamarine;
+    width: 100%;
+    font-family: var(--fontHanken);
+    text-transform: uppercase;
 }
 
-/* -----------MEDIAS------- */
+thead{
+    font-size: 12px;
+    font-weight: 600;
+    color: #444444;
+}
+
+tbody{
+    color:#aaaaaa;
+}
+table svg{
+    width: 35px;
+}
+
+
+
+
+/* --------------------MEDIAS---------------- */
 @media screen and (max-width: 768px){
 
     .header_container button{
@@ -266,7 +309,19 @@ form input[type=button]{
         width: 70%;
 
     }
+    /* ---------FORMULARIO------- */
+    .inputs_form{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .form_coluna1,
+    .form_coluna2{
+    max-width: 500px;
+    width: 80%; 
+
+}
 
 
 }
